@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imagem/icone/favicon.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Tour World</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="#"><img src="./imagem/icone/local.png" alt="logo">Tour World</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#">Passagem</a></li>
+                <li><a href="#">Pacote</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="passagem">
+            <div class="fundo">
+                <div class="container">
+                    <div class="orcamento">
+                            <img src="./imagem/icone/aviao.png" alt="avião">
+                            <h2>Solite um orçamento</h2>
+                        </div>
+                    <form method="post">
+                        <div class="titulo-form">
+                            <h3>Informe seus dados</h3>
+                        </div>
+                        <div class="esquerda-direita container-flex">
+                            <div class="esquerda">
+                                <div class="form-campo">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" name="nome" id="nome" placeholder="Seu Nome" required>
+                                </div>
+                                <div class="form-campo">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" placeholder="Seu Email" required>
+                                </div>
+                                <div class="form-campo">
+                                    <label for="telefone">Telefone</label>
+                                    <input type="tel" name="telefone" id="telefone" placeholder="Seu telefone" required>
+                                </div>
+                                <div class="form-campo">
+                                    <label for="ida">Data da ida</label>
+                                    <input type="date" name="ida" required>
+                                </div>
+                                <div class="form-campo">
+                                    <label for="origem">Origem</label>
+                                    <select name="origem" required>
+                                        <option value="origem">Partindo de</option>
+                                        <option value="hol">Amsterdam(HOL)</option>
+                                        <option value="ind">Bali(IND)</option>
+                                        <option value="esp">Barcelona(ESP)</option>
+                                        <option value="emi">Dubai(EMI)</option>
+                                        <option value="ing">Londres(ING)</option>
+                                        <option value="bra">Rio de janeiro(BRA)</option>
+                                        <option value="ita">Roma(ITA)</option>
+                                        <option value="fra">Paris(FRA)</option>
+                                        <option value="jap">Toquio(JAP)</option>
+                                        <option value="aus">Sydney(AUS)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="direita">
+                                <div class="form-campo">
+                                    <label for="cpf">CPF</label>
+                                    <input type="text" name="cpf" id="cpf" placeholder="Seu CPF" required>
+                                </div>
+                                <div class="form-campo">
+                                    <label for="endereco">Endereço</label>
+                                    <input type="text" name="endereco" id="endereco" placeholder="Seu Endereço" required>
+                                </div>
+                                <div class="form-campo">
+                                    <label for="cep">CEP</label>
+                                    <input type="text" name="cep" id="cep" placeholder="Seu CEP" required>
+                                </div>
+                                <div class="form-campo">
+                                    <label for="volta">Data da volta</label>
+                                    <input type="date" name="volta" required>
+                                </div>
+                                <div class="form-campo">
+                                    <label for="destino">Destino</label>
+                                    <select name="destino" required>
+                                        <option value="destino">Indo para</option>
+                                        <option value="hol">Amsterdam(HOL)</option>
+                                        <option value="ind">Bali(IND)</option>
+                                        <option value="esp">Barcelona(ESP)</option>
+                                        <option value="emi">Dubai(EMI)</option>
+                                        <option value="ing">Londres(ING)</option>
+                                        <option value="bra">Rio de janeiro(BRA)</option>
+                                        <option value="ita">Roma(ITA)</option>
+                                        <option value="fra">Paris(FRA)</option>
+                                        <option value="jap">Toquio(JAP)</option>
+                                        <option value="aus">Sydney(AUS)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="infantil">
+                            <label for="infantil">Quarto com cama infantil</label>
+                            <div class="crianca container-flex">
+                                <div class="resposta">
+                                    <input type="radio" name="resposta" value="sim" required>
+                                    <label for="sim">Sim</label>
+                                </div>
+                                <div class="resposta">
+                                    <input type="radio" name="resposta" value="nao" required checked>
+                                    <label for="sim">Não</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hospedagem">
+                            <label for="hospedagem">Preferência da hospedagem</label>
+                            <div class="beneficio container-flex">
+                                <div class="beneficio">
+                                    <input type="checkbox" name="beneficio[]" value="piscina">
+                                    <label for="piscina">Piscina</label>
+                                </div>
+                                <div class="beneficio">
+                                    <input type="checkbox" name="beneficio[]" value="wifi">
+                                    <label for="wifi">Wi-Fi</label>
+                                </div>
+                                <div class="beneficio">
+                                    <input type="checkbox" name="beneficio[]" value="garagem">
+                                    <label for="garagem">Garagem</label>
+                                </div>
+                                <div class="beneficio">
+                                    <input type="checkbox" name="beneficio[]" value="suite">
+                                    <label for="suite">Suite</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Solicitar orçamento</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="pacote">
+            <div class="container">
+                <h4>Pacote</h4>
+                <div class="container-pacote container-flex">
+                    <div class="pac">
+                        <div class="imagem">
+                            <img src="./imagem/paisagem/disney.jpg" alt="disney">
+                        </div>
+                        <div class="titulo-pacote">
+                            <h5>Disney</h5>
+                            <p>Saindo de São Paulo</p>
+                        </div>
+                        <div class="lista-pacote">
+                            <ul>
+                                <li><img src="./imagem/icone/check.png" alt="check"> Aéreo ida e volta</li>
+                                <li><img src="./imagem/icone/check.png" alt="check"> Hospedagem com café da manhã</li>
+                                <li> <img src="./imagem/icone/check.png" alt="check"> 3 diárias</li>
+                            </ul>
+                        </div>
+                        <div class="preco-pacote">
+                            <p>R$ <span>5000</span></p>
+                        </div>
+                        <div class="btn-pacote">
+                            <button type="submit">Confira</button>
+                        </div>
+                    </div>
+                    <div class="pac">
+                        <div class="imagem">
+                            <img src="./imagem/paisagem/machu-picchu.jpg" alt="machu picchu">
+                        </div>
+                        <div class="titulo-pacote">
+                            <h5>Machu Picchu</h5>
+                            <p>Saindo de Salvador</p>
+                        </div>
+                        <div class="lista-pacote">
+                            <ul>
+                                <li><img src="./imagem/icone/check.png" alt="check"> Aéreo ida e volta</li>
+                                <li><img src="./imagem/icone/check.png" alt="check"> Hospedagem com café da manhã</li>
+                                <li> <img src="./imagem/icone/check.png" alt="check"> 3 diárias</li>
+                            </ul>
+                        </div>
+                        <div class="preco-pacote">
+                            <p>R$ <span>1500</span></p>
+                        </div>
+                        <div class="btn-pacote">
+                            <button type="submit">Confira</button>
+                        </div>
+                    </div>
+                    <div class="pac">
+                        <div class="imagem">
+                            <img src="./imagem/paisagem/maldivas.jpg" alt="ilhas maldivas">
+                        </div>
+                        <div class="titulo-pacote">
+                            <h5>Ilhas Maldivas</h5>
+                            <p>Saindo de São Paulo</p>
+                        </div>
+                        <div class="lista-pacote">
+                            <ul>
+                                <li><img src="./imagem/icone/check.png" alt="check"> Aéreo ida e volta</li>
+                                <li><img src="./imagem/icone/check.png" alt="check"> Hospedagem com café da manhã</li>
+                                <li> <img src="./imagem/icone/check.png" alt="check"> 5 diárias</li>
+                            </ul>
+                        </div>
+                        <div class="preco-pacote">
+                            <p>R$ <span>3800</span></p>
+                        </div>
+                        <div class="btn-pacote">
+                            <button type="submit">Confira</button>
+                        </div>
+                    </div>
+                    <div class="pac">
+                        <div class="imagem">
+                            <img src="./imagem/paisagem/cairo.jpg" alt="cairo">
+                        </div>
+                        <div class="titulo-pacote">
+                            <h5>Cairo</h5>
+                            <p>Saindo do Rio Grando do sul</p>
+                        </div>
+                        <div class="lista-pacote">
+                            <ul>
+                                <li><img src="./imagem/icone/check.png" alt="check"> Aéreo ida e volta</li>
+                                <li><img src="./imagem/icone/check.png" alt="check"> Hospedagem com café da manhã</li>
+                                <li> <img src="./imagem/icone/check.png" alt="check"> 4 diárias</li>
+                            </ul>
+                        </div>
+                        <div class="preco-pacote">
+                            <p>R$ <span>2900</span></p>
+                        </div>
+                        <div class="btn-pacote">
+                            <button type="submit">Confira</button>
+                        </div>
+                    </div>
+                    <div class="pac">
+                        <div class="imagem">
+                            <img src="./imagem/paisagem/patagonia.jpg" alt="patagônia">
+                        </div>
+                        <div class="titulo-pacote">
+                            <h5>Patagônia</h5>
+                            <p>Saindo de São Paulo</p>
+                        </div>
+                        <div class="lista-pacote">
+                            <ul>
+                                <li><img src="./imagem/icone/check.png" alt="check"> Aéreo ida e volta</li>
+                                <li><img src="./imagem/icone/check.png" alt="check"> Hospedagem com café da manhã</li>
+                                <li> <img src="./imagem/icone/check.png" alt="check"> 3 diárias</li>
+                            </ul>
+                        </div>
+                        <div class="preco-pacote">
+                            <p>R$ <span>700</span></p>
+                        </div>
+                        <div class="btn-pacote">
+                            <button type="submit">Confira</button>
+                        </div>
+                    </div>
+                    <div class="pac">
+                        <div class="imagem">
+                            <img src="./imagem/paisagem/foz.jpg" alt="foz do iguaçu">
+                        </div>
+                        <div class="titulo-pacote">
+                            <h5>Foz do Iguaçu</h5>
+                            <p>Saindo de brasília</p>
+                        </div>
+                        <div class="lista-pacote">
+                            <ul>
+                                <li><img src="./imagem/icone/check.png" alt="check"> Aéreo ida e volta</li>
+                                <li><img src="./imagem/icone/check.png" alt="check"> Hospedagem com café da manhã</li>
+                                <li> <img src="./imagem/icone/check.png" alt="check"> 7 diárias</li>
+                            </ul>
+                        </div>
+                        <div class="preco-pacote">
+                            <p>R$ <span>300</span></p>
+                        </div>
+                        <div class="btn-pacote">
+                            <button type="submit">Confira</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contato">
+            <div class="container">
+                <h4>Contato</h4>
+                <form method="post">
+                    <div class="form-campo">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" id="name" placeholder="Seu Nome">
+                    </div>
+                    <div class="form-campo">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Seu Email">
+                    </div>
+                    <div class="form-campo">
+                        <label for="phone">Telefone</label>
+                        <input type="text" name="phone" id="phone" placeholder="Seu Telefone">
+                    </div>
+                    <div class="form-campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea name="mensagem" id="mensagem" placeholder="Sua Mensagem"></textarea>
+                    </div>
+                    <div class="btn-contato">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container-footer container container-flex">
+            <p>2023 &copy; TOUR WORLD - Todos os direitos reservados</p>
+            <div class="icone">
+                <a href="#"><img src="./imagem/icone/facebook.png" alt="logo do facebook"></a>
+                <a href="#"><img src="./imagem/icone/instagram.png" alt="logo do instagram"></a>
+                <a href="#"><img src="./imagem/icone/youtube.png" alt="logo do youtube"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
